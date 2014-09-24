@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Laravel CheatSheet</string>
+    <string name="title_section1">News</string>
+    <string name="title_section2">Programming Language</string>
+    <string name="title_section3">Favorite</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_example">Example action</string>
+    <string name="action_settings">Settings</string>
+    
+    <!-- Editor menu -->
+    <string name="font_larger">+</string>
+    <string name="font_smaller">-</string>
+    
+    <string	name="artisan">Artisan</string>
+    <string	name="schema">Schema</string>
+    
+    <!-- Cheat Sheets - Names -->
+    
+    <string name="Schema">
+    // Indicate that the table needs to be created\nSchema::create(\'table\', function($table)\n{\n\t$table->increments(\'id\');\n});\n// Specify a Connection\nSchema::connection(\'foo\')->create(\'table\', function($table){});\n// Rename the table to a given name\nSchema::rename($from, $to);\n// Indicate that the table should be dropped\nSchema::drop(\'table\');\n// Indicate that the table should be dropped if it exists\nSchema::dropIfExists(\'table\');\n// Determine if the given table exists\nSchema::hasTable(\'table\');\n// Determine if the given table has a given column\nSchema::hasColumn(\'table\', \'column\');\n// Update an existing table\nSchema::table(\'table\', function($table){});\n// Indicate that the given columns should be renamed\n$table->renameColumn(\'from\', \'to\');\n// Indicate that the given columns should be dropped\n$table->dropColumn(string|array);\n// The storage engine that should be used for the table\n$table->engine = \'InnoDB\';\n// Only work on MySQL\n$table->string(\'name\')->after(\'email\');    
+    </string>
+    
+    <!-- Cheat Sheet Labels -->
+    <string-array name="cheat_sheet_labels">
+        <item>@string/artisan</item>
+        <item>@string/schema</item>
+        <item>Views</item>
+        <item>Composer</item>
+        <item>Input</item>
+        <item>HTML Builder</item>
+        <item>Routing</item>
+        <item>Cache</item>
+        <item>Cookies</item> Strings
+        <item>Strings</item>
+        <item>Sessions</item>
+        <item>App</item>
+        <item>Localization</item>
+        <item>Log</item>
+        <item>Files</item>
+        <item>Requests</item>
+        <item>URLs</item>
+        <item>Events</item>
+        <item>Database</item>
+        <item>Helpers</item>
+        <item>Redirects</item>
+        <item>IoC</item>
+        <item>Security</item>
+        <item>Eloquent</item>
+        <item>Mail</item>
+        <item>Unit testing</item>
+        <item>Queues</item>
+        <item>SSH</item>
+        <item>Validation</item>
+    </string-array>
+    
+    
+    
+
+</resources>
