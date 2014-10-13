@@ -1,6 +1,9 @@
 package com.brkrgcr.cheatsheet;
 
 import com.brkrgcr.cheatsheet.R;
+import com.google.gson.JsonArray;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
@@ -102,6 +105,7 @@ public class NavigationDrawerFragment extends Fragment {
                 selectItem(position);
             }
         });
+
         mDrawerListView.setAdapter(new ArrayAdapter<String>(
                 getActionBar().getThemedContext(),
                 android.R.layout.simple_list_item_1,

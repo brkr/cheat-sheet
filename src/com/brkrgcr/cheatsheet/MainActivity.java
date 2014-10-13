@@ -4,6 +4,10 @@ package com.brkrgcr.cheatsheet;
 import com.brkrgcr.cheatsheet.views.CheatSheetDetailsFragment;
 import com.brkrgcr.cheatsheet.views.CheatSheetFragment;
 import com.brkrgcr.cheatsheet.R;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+import com.koushikdutta.async.future.FutureCallback;
+import com.koushikdutta.ion.Ion;
 
 import android.app.Activity;
 import android.support.v7.app.ActionBarActivity;
@@ -56,16 +60,17 @@ public class MainActivity extends ActionBarActivity implements
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-
+		
+		
 		mNavigationDrawerFragment = (NavigationDrawerFragment) getSupportFragmentManager().findFragmentById(R.id.navigation_drawer);
 		mTitle = getTitle();
-
 		// Set up the drawer.
 		mNavigationDrawerFragment.setUp(R.id.navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout));
 	}
 
 	@Override
-	public void onNavigationDrawerItemSelected(int position) {
+	public void onNavigationDrawerItemSelected(int position) 
+	{
 		// update the main content by replacing fragments
 		Log.d("berker", "onNavigationDrawerItemSelected :Number : " + position);
 		FragmentManager fragmentManager = getSupportFragmentManager();
@@ -81,7 +86,7 @@ public class MainActivity extends ActionBarActivity implements
 
 		
 		
-		case 0:
+		case 2:
 			args.putInt(ARG_SECTION_NUMBER, 0);
 			frag =new CheatSheetFragment();
 			frag.setArguments(args);
@@ -89,19 +94,6 @@ public class MainActivity extends ActionBarActivity implements
 		break;
 		
 		
-		case 1:
-			args.putInt(ARG_SECTION_NUMBER, 1);
-			frag =new CheatSheetFragment();
-			frag.setArguments(args);
-			fragmentManager.beginTransaction().replace(R.id.container, frag).commit();
-			break;
-			
-		case 2:
-			args.putInt(ARG_SECTION_NUMBER, 2);
-			frag =new CheatSheetFragment();
-			frag.setArguments(args);
-			fragmentManager.beginTransaction().replace(R.id.container, frag).commit();
-			break;
 
 		default:
 			args.putInt(ARG_SECTION_NUMBER, 0);
